@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="hidden">
+        <!-- Main Container -->
+        <div class="management-container">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-content">
+                    <h1>Police Management System</h1>
+                    <div class="user-info">
+                        <span class="user-name" id="userName">Loading...</span>
+                        <span class="user-rank" id="userRank">Loading...</span>
+                    </div>
+                </div>
+                <button class="close-btn" id="closeBtn">×</button>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <div class="nav-tabs">
+                <button class="tab-btn active" data-tab="officers">Officers</button>
+                <button class="tab-btn" data-tab="add-officer">Add Officer</button>
+                <button class="tab-btn" data-tab="reports">Reports</button>
+            </div>
+
+            <!-- Officers Tab -->
+            <div class="tab-content active" id="officers-tab">
+                <div class="officers-header">
+                    <h2>Department Officers</h2>
+                    <div class="search-box">
+                        <input type="text" id="searchOfficers" placeholder="Search officers...">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                </div>
+                
+                <div class="officers-list" id="officersList">
+                    <div class="loading">Loading officers...</div>
+                </div>
+            </div>
+
+            <!-- Add Officer Tab -->
+            <div class="tab-content" id="add-officer-tab">
+                <div class="add-officer-form">
+                    <h2>Add New Officer</h2>
+                    <form id="addOfficerForm">
+                        <div class="form-group">
+                            <label for="sourceId">Server ID:</label>
+                            <input type="number" id="sourceId" name="sourceId" required placeholder="Enter player's server ID">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="officerRank">Rank:</label>
+                            <select id="officerRank" name="officerRank" required>
+                                <option value="0">Recruit</option>
+                                <option value="1">Officer</option>
+                                <option value="2">Sergeant</option>
+                                <option value="3">Lieutenant</option>
+                                <option value="4">Chief</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="officerCallsign">Callsign (Optional):</label>
+                            <input type="text" id="officerCallsign" name="officerCallsign" maxlength="10">
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Add Officer</button>
+                            <button type="button" class="btn btn-secondary" id="cancelAdd">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Reports Tab -->
+            <div class="tab-content" id="reports-tab">
+                <div class="reports-content">
+                    <h2>Department Reports</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Total Officers</h3>
+                            <span class="stat-number" id="totalOfficers">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Online Officers</h3>
+                            <span class="stat-number" id="onlineOfficers">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Active Callsigns</h3>
+                            <span class="stat-number" id="activeCallsigns">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Officer Details Modal -->
+        <div class="modal" id="officerModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalOfficerName">Officer Details</h3>
+                    <button class="close-btn" id="closeModal">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="officer-details">
+                        <div class="detail-row">
+                            <label>Citizen ID:</label>
+                            <span id="modalCitizenId">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <label>Current Rank:</label>
+                            <span id="modalCurrentRank">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <label>Callsign:</label>
+                            <span id="modalCallsign">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <label>Status:</label>
+                            <span id="modalStatus">-</span>
+                        </div>
+                    </div>
+                    
+                    <div class="officer-actions">
+                        <div class="action-group">
+                            <label for="newCallsign">Update Callsign:</label>
+                            <div class="input-group">
+                                <input type="text" id="newCallsign" placeholder="Enter new callsign">
+                                <button class="btn btn-primary" id="updateCallsign">Update</button>
+                            </div>
+                        </div>
+                        
+                        <div class="action-group">
+                            <label for="newRank">Update Rank:</label>
+                            <div class="input-group">
+                                <select id="newRank">
+                                    <option value="0">Recruit</option>
+                                    <option value="1">Officer</option>
+                                    <option value="2">Sergeant</option>
+                                    <option value="3">Lieutenant</option>
+                                    <option value="4">Chief</option>
+                                </select>
+                                <button class="btn btn-primary" id="updateRank">Update</button>
+                            </div>
+                        </div>
+                        
+                        <div class="action-group danger">
+                            <button class="btn btn-danger" id="terminateOfficer">Terminate Officer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirmation Modal -->
+        <div class="modal" id="confirmModal">
+            <div class="modal-content small">
+                <div class="modal-header">
+                    <h3 id="confirmTitle">Confirm Action</h3>
+                </div>
+                <div class="modal-body">
+                    <p id="confirmMessage">Are you sure you want to perform this action?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" id="confirmYes">Yes</button>
+                    <button class="btn btn-secondary" id="confirmNo">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+    "police_management": {
+        "title": "Sistema de Gestión Policial",
+        "access_denied": "No tienes permisos para acceder a este sistema.",
+        "location_required": "Debes estar en una comisaría para acceder al sistema de gestión.",
+        "invalid_callsign": "Formato de distintivo inválido. Debe tener entre 2-10 caracteres.",
+        "callsign_pattern": "El distintivo solo puede contener letras, números y guiones.",
+        "callsign_taken": "El distintivo \"{callsign}\" ya está en uso.",
+        "callsign_updated": "Distintivo actualizado correctamente.",
+        "callsign_failed": "Error al actualizar el distintivo.",
+        "rank_updated": "Rango del oficial actualizado correctamente.",
+        "rank_failed": "Error al actualizar el rango del oficial.",
+        "officer_terminated": "Oficial dado de baja correctamente.",
+        "terminate_failed": "Error al dar de baja al oficial.",
+        "officer_added": "Oficial agregado correctamente.",
+        "add_failed": "Error al agregar oficial.",
+        "invalid_rank": "Rango especificado inválido.",
+        "higher_rank": "No puedes promover a alguien a un rango superior al tuyo.",
+        "termination_notice": "Un oficial ha sido dado de baja de la fuerza.",
+        "callsign_notice": "Distintivo del oficial actualizado: {callsign}",
+        "terminated_notice": "Has sido dado de baja de la fuerza policial.",
+        "sync_success": "Sincronizados {count} oficiales de policía.",
+        "no_permission": "No tienes permisos para usar este comando.",
+        "officers": {
+            "title": "Oficiales del Departamento",
+            "search_placeholder": "Buscar oficiales...",
+            "no_officers": "No se encontraron oficiales",
+            "online": "En línea",
+            "offline": "Desconectado",
+            "citizen_id": "ID Ciudadano",
+            "rank": "Rango",
+            "callsign": "Distintivo",
+            "status": "Estado",
+            "hired_date": "Fecha de Contratación",
+            "current_rank": "Rango Actual",
+            "update_callsign": "Actualizar Distintivo",
+            "update_rank": "Actualizar Rango",
+            "terminate": "Dar de Baja Oficial",
+            "enter_callsign": "Ingresar nuevo distintivo",
+            "select_rank": "Seleccionar nuevo rango"
+        },
+        "add_officer": {
+            "title": "Agregar Nuevo Oficial",
+            "citizen_id": "ID Ciudadano",
+            "rank": "Rango",
+            "callsign": "Distintivo (Opcional)",
+            "add_button": "Agregar Oficial",
+            "cancel_button": "Cancelar",
+            "ranks": {
+                "0": "Recluta",
+                "1": "Oficial",
+                "2": "Sargento",
+                "3": "Teniente",
+                "4": "Jefe"
+            }
+        },
+        "reports": {
+            "title": "Reportes del Departamento",
+            "total_officers": "Total de Oficiales",
+            "online_officers": "Oficiales En Línea",
+            "active_callsigns": "Distintivos Activos"
+        },
+        "confirm": {
+            "terminate_title": "Dar de Baja Oficial",
+            "terminate_message": "¿Estás seguro de que quieres dar de baja a este oficial? Esta acción no se puede deshacer.",
+            "yes": "Sí",
+            "no": "No"
+        },
+        "notifications": {
+            "success": "Éxito",
+            "error": "Error",
+            "info": "Información"
+        }
+    }
+}

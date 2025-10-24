@@ -1,0 +1,75 @@
+{
+    "police_management": {
+        "title": "Police Management System",
+        "access_denied": "You do not have permission to access this system.",
+        "location_required": "You must be at a police station to access the management system.",
+        "invalid_callsign": "Invalid callsign format. Must be 2-10 characters.",
+        "callsign_pattern": "Callsign can only contain letters, numbers, and dashes.",
+        "callsign_taken": "Callsign \"{callsign}\" is already in use.",
+        "callsign_updated": "Callsign updated successfully.",
+        "callsign_failed": "Failed to update callsign.",
+        "rank_updated": "Officer rank updated successfully.",
+        "rank_failed": "Failed to update officer rank.",
+        "officer_terminated": "Officer terminated successfully.",
+        "terminate_failed": "Failed to terminate officer.",
+        "officer_added": "Officer added successfully.",
+        "add_failed": "Failed to add officer.",
+        "invalid_rank": "Invalid rank specified.",
+        "higher_rank": "You cannot promote someone to a higher rank than yourself.",
+        "termination_notice": "An officer has been terminated from the force.",
+        "callsign_notice": "Officer callsign updated: {callsign}",
+        "terminated_notice": "You have been terminated from the police force.",
+        "sync_success": "Synced {count} police officers.",
+        "no_permission": "You do not have permission to use this command.",
+        "officers": {
+            "title": "Department Officers",
+            "search_placeholder": "Search officers...",
+            "no_officers": "No officers found",
+            "online": "Online",
+            "offline": "Offline",
+            "citizen_id": "Citizen ID",
+            "rank": "Rank",
+            "callsign": "Callsign",
+            "status": "Status",
+            "hired_date": "Hired Date",
+            "current_rank": "Current Rank",
+            "update_callsign": "Update Callsign",
+            "update_rank": "Update Rank",
+            "terminate": "Terminate Officer",
+            "enter_callsign": "Enter new callsign",
+            "select_rank": "Select new rank"
+        },
+        "add_officer": {
+            "title": "Add New Officer",
+            "citizen_id": "Citizen ID",
+            "rank": "Rank",
+            "callsign": "Callsign (Optional)",
+            "add_button": "Add Officer",
+            "cancel_button": "Cancel",
+            "ranks": {
+                "0": "Recruit",
+                "1": "Officer", 
+                "2": "Sergeant",
+                "3": "Lieutenant",
+                "4": "Chief"
+            }
+        },
+        "reports": {
+            "title": "Department Reports",
+            "total_officers": "Total Officers",
+            "online_officers": "Online Officers",
+            "active_callsigns": "Active Callsigns"
+        },
+        "confirm": {
+            "terminate_title": "Terminate Officer",
+            "terminate_message": "Are you sure you want to terminate this officer? This action cannot be undone.",
+            "yes": "Yes",
+            "no": "No"
+        },
+        "notifications": {
+            "success": "Success",
+            "error": "Error",
+            "info": "Information"
+        }
+    }
+}
