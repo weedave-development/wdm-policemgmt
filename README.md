@@ -1,5 +1,8 @@
 # wdm-policemgmt
 
+Discord/Support https://discord.gg/Yyh6aFNrkn
+Website: https://www.wdmods.co.uk/
+
 ## 🚔 **Police Management System**
 
 A comprehensive administrative tool for QBOX servers that allows police department leaders to manage their force through a modern, real-time interface. The system provides complete officer management including hiring, rank assignments, callsign management, and officer termination - all synchronized live across the server.
