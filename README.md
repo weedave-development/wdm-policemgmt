@@ -195,10 +195,4 @@ The system supports multiple languages through the `locales/` directory:
 - `/syncpolice` - Force sync all police officers (admin only)
 - Check server console for database initialization messages
 
-## Support
 
-For support and updates, visit the [QBOX Discord](https://discord.gg/qbox) or create an issue on the GitHub repository.
-
-## License
-
-This resource is part of the QBOX framework and follows the same licensing terms.
